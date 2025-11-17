@@ -8,7 +8,6 @@ import android.view.animation.AlphaAnimation
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 
 /**
  * PUBLIC_INTERFACE
@@ -123,6 +122,23 @@ class MainActivity : Activity() {
         val anim = AlphaAnimation(0.6f, 1f)
         anim.duration = 120
         view.startAnimation(anim)
+    }
+
+    // PUBLIC_INTERFACE
+    /**
+     * Fades in the primary UI to provide a subtle entrance animation.
+     * This keeps visual behavior consistent with Modern/Ocean theme without extra dependencies.
+     */
+    private fun applyIntroFade() {
+        // Animate the root ScrollView (content view of the Activity)
+        val root = findViewById<View>(android.R.id.content)
+        root?.let {
+            it.alpha = 0f
+            val anim = AlphaAnimation(0f, 1f)
+            anim.duration = 220
+            it.startAnimation(anim)
+            it.alpha = 1f
+        }
     }
 
     private fun updateTurnText() {
