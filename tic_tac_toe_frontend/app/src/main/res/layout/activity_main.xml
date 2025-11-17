@@ -47,8 +47,7 @@
             android:clipToOutline="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:shape="rectangle">
+            android:layout_gravity="center">
 
             <!-- Board Grid -->
             <GridLayout
