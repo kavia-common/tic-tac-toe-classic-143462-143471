@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#f9fafb"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header / Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_in_progress"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/turnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turn_x"
+            android:textSize="16sp"
+            android:textColor="#2563EB"
+            android:paddingBottom="16dp" />
+
+        <!-- Card Surface -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="6dp"
+            android:padding="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:clipToPadding="false"
+            android:clipToOutline="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:shape="rectangle">
+
+            <!-- Board Grid -->
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true"
+                android:layout_gravity="center">
+
+                <!-- 9 Buttons -->
+                <Button
+                    android:id="@+id/cell0"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell1"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell2"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell3"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell4"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell5"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell6"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell7"
+                    style="@style/TicCell" />
+                <Button
+                    android:id="@+id/cell8"
+                    style="@style/TicCell" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2563EB"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+</ScrollView>
